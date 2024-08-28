@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "task": "Makan coba",
+        "isComplete": 1
+    },
+    {
+        "id": 6,
+        "task": "Task 2",
+        "isComplete": 0
+    },
+    {
+        "id": 8,
+        "task": "Apa mungkin",
+        "isComplete": 1
+    }
+]
