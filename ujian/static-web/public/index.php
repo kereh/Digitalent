@@ -6,7 +6,7 @@ $data = file_get_contents('pokemon.json');
 // format ke array asosiatif
 $formated_data = json_decode($data, true);
 // ambil sebagian data saja
-$data_partial = array_slice($formated_data, 0, 250);
+$data_partial = array_slice($formated_data, 0, 200);
 // ambil query, ternary operation
 $query = isset($_GET['search']) ? $_GET['search'] : '';
 // search logic emnggunakan array filter
@@ -39,7 +39,7 @@ if ($query) {
 
   <!-- navbar -->
   <!-- alt bg #ef5350 -->
-  <nav class="sticky shadow-md top-0 left-0 bg-transparent backdrop-blur-md py-1 px-10 flex justify-between items-center z-10">
+  <nav class="sticky shadow-md top-0 left-0 bg-transparent backdrop-blur py-1 px-10 flex justify-between items-center z-10">
     <!-- logo -->
     <div class="relative flex items-center w-16 h-16">
       <img src="img/logo.png" alt="pokemon logo" class="object-cover relative my-auto">
@@ -86,7 +86,7 @@ if ($query) {
   <!-- pokemon list -->
   <div class="w-full flex justify-center items-center py-4 px-10">
     <div class="w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-10">
         <?php if (count($data_partial) > 0): ?>
           <?php foreach ($data_partial as $pokemon): ?>
             <div class="border rounded-lg p-4 w-full cursor-pointer shadow-lg hover:bg-gray-700 hover:text-white transition-all duration-300">
