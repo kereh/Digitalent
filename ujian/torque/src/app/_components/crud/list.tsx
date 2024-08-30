@@ -31,9 +31,9 @@ import { useToast } from "@/components/ui/use-toast";
 
 export default function List() {
   const utils = api.useUtils();
+  const [data] = api.todo.getAll.useSuspenseQuery();
 
   const { toast } = useToast();
-  const [data] = api.todo.getAll.useSuspenseQuery();
   const [curr_id, setCurrId] = useState<string>("");
 
   const updateMutation = api.todo.update.useMutation({

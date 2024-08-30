@@ -6,5 +6,5 @@ export const menus = [
   { text: "Article & Event", link: "/articles" },
   { text: "About", link: "/about" },
   { text: "My Profile", link: "/me" },
-  // { text: "CRUD Showcase", link: "/crud" },
+  { text: "CRUD Showcase", link: "/crud" },
 ];
